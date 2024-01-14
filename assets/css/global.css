@@ -25,6 +25,24 @@ body{
     grid-template-columns: 1fr;
 }
 
+.pagination
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0 auto;
+    width: 2rem;
+    height: 2rem;
+    font-size: .625rem;
+    color: white;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 3rem;
+}
+
 
 @media screen and (min-width: 380px) {
     .pokemons{

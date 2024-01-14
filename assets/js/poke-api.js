@@ -22,7 +22,7 @@ pokeapi.pegardetalhes = (pokemon) => {
             .then(converter_classe_detalhada)
 }
 
-pokeapi.pegarPokemons = (offset = 0, limit = 10) => {
+pokeapi.pegarPokemons = (offset = 0, limit = 20) => {
     const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
     return fetch(url)
             .then((response) => {return response.json()})                         
