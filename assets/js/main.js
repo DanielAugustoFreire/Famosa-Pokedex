@@ -29,7 +29,6 @@ function loadpokemon(offset, limit)
         lista_no_html.innerHTML += new_html
     })
     .catch((error)=> {console.error(error)})
-    .finally(() => {console.log(`Req. Concluida`);})    
 }
 
 botao_mais.addEventListener(`click`, () => {
