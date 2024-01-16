@@ -2,6 +2,7 @@ const lista_no_html = document.getElementById(`listagem_pokemons`)
 const botao_mais = document.getElementById(`botao`)
 const limit = 20;
 let offset = 0;
+const maxRecords = 151;
 
 loadpokemon(offset,limit)
 
@@ -33,7 +34,21 @@ function loadpokemon(offset, limit)
 
 botao_mais.addEventListener(`click`, () => {
     offset += limit
-    loadpokemon(offset, limit)
+
+    const qtdRecords = offset + limit;
+
+    if(qtdRecords >= maxRecords)
+    {
+        const new_limit = qtdRecords - maxRecords;
+
+        loadpokemon(offset, new_limit)
+
+        botao_mais.parentElement.removeChild(botao_mais)
+    }else {
+        loadpokemon(offset, limit)
+    }
+
+
 })
 
 
