@@ -36,7 +36,7 @@ botao_mais.addEventListener(`click`, () => {
     offset += limit
 
     const qtdRecords = offset + limit;
-
+    
     if (qtdRecords >= maxRecords) {
         const new_limit = limit - (qtdRecords - maxRecords);
     
@@ -47,6 +47,7 @@ botao_mais.addEventListener(`click`, () => {
         loadpokemon(offset, limit);
     }
     
+
 
 
 })
