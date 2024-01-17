@@ -6,14 +6,16 @@ const maxRecords = 151;
 
 loadpokemon(offset,limit)
 
+
+
 function loadpokemon(offset, limit)
 {
     pokeapi.pegarPokemons(offset,limit).then((lista_json) => {
     
-        const new_html = lista_json.map((pokemon) => `        
+        const new_html = lista_json.map((pokemon) =>   `     
                         <li class="pokemon ${pokemon.type}">
                             <span class="numero">#${pokemon.id}</span>
-                            <span class="nome">${pokemon.name}</span>
+                            <span class="nome" id="${pokemon.id}" onclick="iniciar(${pokemon.id})">${pokemon.name}</span>
 
                             <div class="detalhes">
                                 
@@ -24,13 +26,17 @@ function loadpokemon(offset, limit)
                                 <img src="${pokemon.image}" alt="${pokemon.name}">
 
                             </div>
-                        </li>`          
+                        </li>    
+                                                        `  
         ).join(``) 
 
         lista_no_html.innerHTML += new_html
     })
     .catch((error)=> {console.error(error)})
 }
+
+
+
 
 botao_mais.addEventListener(`click`, () => {
     offset += limit

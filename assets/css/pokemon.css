@@ -1,0 +1,56 @@
+/* Estilo para a div principal */
+.pokemon-card {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a imagem do Pokémon */
+.pokemon-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Estilo para o nome do Pokémon */
+.pokemon-name {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Estilo para o tipo do Pokémon */
+.pokemon-type {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo para o poder de ataque do Pokémon */
+.pokemon-attack {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo para a descrição do Pokémon */
+.pokemon-description {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Estilo para o link "Voltar para a Pokedex" */
+.pokemon-card a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.pokemon-card a:hover {
+    text-decoration: underline;
+}
+    
